@@ -1,0 +1,102 @@
+// -------------------------------------------------
+// KL[AS] Variables
+// ---------------------------------------------- */
+
+$heading-font: Helvetica, Arial, sans-serif;
+$body-font: Helvetica, Arial, sans-serif;
+
+$body-color: #555;
+$heading-color: #333;
+$link-color: #000;
+$link-hover: #555;
+
+$page-width: 1280px;
+
+$ani-speed: 250ms;
+
+
+// -------------------------------------------------
+// KL[AS] Mixins
+// ---------------------------------------------- */
+@mixin areas-text-style-nav {
+	font-size: .875em;
+	text-transform: uppercase;
+	letter-spacing: .15em;
+}
+
+@mixin a-white-to-black {
+	color: white;
+	&:hover { color: black; }
+}
+
+@mixin header-box($w) {
+	$header_width: $w;
+	position: relative;
+	width: $header_width;
+	padding: 11em 1.7em 1.1em;
+	//display: table-cell;
+	vertical-align: bottom;
+	margin: 0 0 1.1em;
+	overflow: hidden;
+
+	&:after { 
+		position: absolute;
+		width: 50.4em; 
+		height: 44em; 
+		bottom: -6.8em; 
+		right: -7.4em;
+		content: ''; 
+		background-color: $gold_alt;
+		@include rotate(-45deg);
+	}
+
+	h2 {
+		position: relative;
+		z-index: 2;
+		margin: 0;
+	}
+}
+
+@mixin column-50-pct {
+	width: 50%;
+	float: left;
+
+	p {
+		padding: 0 2em 1em;
+	}
+}
+
+@mixin column-33-pct {
+	width: (($page_width - 40 - 20*2) / 3);
+	float: left;
+	margin-left: 20px;
+
+	&.first { margin-left: 0; }
+
+	p {
+		padding: 0 0 1em;
+	}
+}
+
+@mixin column-66-pct {
+	width: (($page_width - 40 - 10) / 3 * 2);
+	float: left;
+	margin-left: 20px;
+
+	&.first { margin-left: 0; }
+
+	p {
+		padding: 0 2em 1em;
+	}
+}
+
+@mixin trans-fade-hidden {
+	@include transition(opacity $ani_speed linear 0ms, visibility $ani_speed linear 0ms);
+	visibility: hidden;
+	opacity: 0;
+}
+
+@mixin trans-fade-visible {
+	visibility: visible; 
+	opacity: 1;
+}

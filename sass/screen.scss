@@ -1,0 +1,42 @@
+@import "partials/normalize";
+@import "partials/klas-framework";
+
+@import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
+@import "compass/css3/box-sizing";
+@import "compass/css3/opacity";
+@import "compass/css3/transform";
+@import "compass/css3/transition";
+@import "compass/typography/lists/inline-block-list";
+@import "compass/typography/text/replacement";
+@import "compass/utilities/general/clearfix";
+
+
+/* -------------------------------------------------
+** TEMPLATE
+** ---------------------------------------------- */
+* { @include box-sizing('border-box'); }
+
+body {
+	color: $body-color;
+	font-size: 16px;
+	max-width: $page-width;
+	padding: 20px;
+}
+h1 {
+	color: $heading-color;
+	font-size: 32px;
+}
+h2 {
+	color: $heading-color;
+	font-size: 24px;
+}
+p {
+	margin-bottom: 1em;
+}
+a {
+	color: $link-color;
+	&:hover{
+		color: $link-hover;
+	}
+}
