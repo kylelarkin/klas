@@ -21,6 +21,10 @@
 	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="<?php bloginfo('atom_url'); ?>" />
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico" />
 	
+	<script type="text/javascript">
+		var site_url = '<?php bloginfo('url'); ?>';
+	</script>
+	
 </head>
 
 <body <?php body_class(); ?>>
