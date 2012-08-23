@@ -32,4 +32,8 @@ add_action( 'widgets_init', 'klas_widgets_init' );
 // Registers Editor Styles
 add_editor_style( 'css/editor-style.css' );
 
+// Register theme support for post thumbnails/featured images + example
+add_theme_support( 'post-thumbnails' );
+//add_image_size( $name, $width, $height, $hard_crop[boolean] );
+
 ?>
