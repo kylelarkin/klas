@@ -30,5 +30,5 @@ $pie-behavior: url(/wp-content/themes/klas/js/PIE.php); // BE SURE TO UPDATE THI
 ** ---------------------------------------------- */
 .lt-ie8 {
 	//Hack for IE7 and lower box-sizing
-	* { box-sizing: border-box; *behavior: url(/wp-content/themes/areas/js/boxsizing.htc); }
+	* { box-sizing: border-box; *behavior: url(/wp-content/themes/klas/js/boxsizing.htc); }
 } //end .lt-ie8
