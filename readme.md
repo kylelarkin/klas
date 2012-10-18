@@ -10,7 +10,7 @@ A SASS based starter theme for WordPress created by <a href="http://kylelarkin.c
 3. Refresh your permalinks.
 
 ## Taking inspiration from:
-- HTML5 Boilerplate
-- Starkers
-- Roots
-- _s
+- [HTML5 Boilerplate](http://html5boilerplate.com/)
+- [Starkers](http://viewportindustries.com/products/starkers/)
+- [Roots](http://www.rootstheme.com/)
+- [_s](https://github.com/Automattic/_s)
