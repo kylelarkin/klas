@@ -39,4 +39,5 @@
 			</nav>
 			
 		</header>
-	
+
+		<div class="content-wrapper clearfix" role="content"> <!-- End Header -->
