@@ -1,11 +1,12 @@
-@import "partials/normalize";
+@import "partials/reset";
 @import "partials/klas-framework";
 
 // -------------------------------------------------
 // Editor Styles
 // ---------------------------------------------- */
 
-#tinymce{
+#tinymce {
 	font-family: $body-font;
 	max-width: $page-width;	
+	padding: 10px;
 }
