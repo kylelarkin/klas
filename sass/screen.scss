@@ -17,6 +17,17 @@
 ** ---------------------------------------------- */
 * { @include box-sizing('border-box'); }
 
+/* iOS fixes */
+html { -webkit-text-size-adjust: none; }
+input[type=submit] { -webkit-appearance: none; -moz-appearance: none; }
+
+/* Media Queries for determining javascript events, via http://adactio.com/journal/5429/ */
+body:after { content: 'mobile'; display: none; }
+@media only screen and (min-width: 620px) {
+	body:after { content: 'desktop'; }
+}
+// other sizes defined here
+
 body {
 	color: $body-color;
 	font-size: 16px;
