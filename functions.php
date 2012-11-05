@@ -32,6 +32,17 @@ add_action( 'widgets_init', 'klas_widgets_init' );
 // Registers Editor Styles
 add_editor_style( 'css/editor-style.css' );
 
+// Add custom logo to Wordpress Login page(s). Logo should be no bigger than 323 pixels wide by 67 pixels high
+function klas_login_logo() { ?>
+    <style type="text/css">
+        body.login div#login h1 a {
+            background: url('<?php bloginfo( 'template_directory' ) ?>/img/wp-login-logo-klas.png') no-repeat 0 0;
+			margin: 0 0 0 23px;
+        }
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'klas_login_logo' );
+
 // Register theme support for post thumbnails/featured images + example
 add_theme_support( 'post-thumbnails' );
 //add_image_size( $name, $width, $height, $hard_crop[boolean] );
