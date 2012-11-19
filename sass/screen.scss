@@ -34,6 +34,12 @@ body {
 	max-width: $page-width;
 	padding: 20px;
 }
+a {
+	color: $link-color;
+	&:hover{
+		color: $link-hover;
+	}
+}
 h1 {
 	color: $heading-color;
 	font-size: 32px;
@@ -45,9 +51,7 @@ h2 {
 p {
 	padding-bottom: 1em;
 }
-a {
-	color: $link-color;
-	&:hover{
-		color: $link-hover;
-	}
+ul { 
+	list-style: disc; 
+	padding: 0 0 0 1.1em;
 }
