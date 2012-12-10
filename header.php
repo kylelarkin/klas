@@ -16,7 +16,7 @@
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<script src="<?php bloginfo( 'template_directory' ); ?>/js/respond.min.js"></script>
-		<script src="<?php bloginfo( 'template_directory' ); ?>/js/ie-comb.js"></script>
+		<script src="<?php bloginfo( 'template_directory' ); ?>/js/ie-min.js"></script>
 		<link href="<?php bloginfo( 'stylesheet_directory' ); ?>/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
 	<![endif]-->
 	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="<?php bloginfo('atom_url'); ?>" />
@@ -35,7 +35,7 @@
 		<header role="header">
 		
 			<nav role="navigation">
-				<?php wp_nav_menu( array( 'menu' => 'primary-nav', 'container' => false) ); ?>
+				<?php wp_nav_menu( array( 'theme_location' => 'primary-nav', 'container' => false) ); ?>
 			</nav>
 			
 		</header>

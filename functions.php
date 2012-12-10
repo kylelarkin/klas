@@ -10,8 +10,11 @@ add_action('wp_enqueue_scripts', 'klas_scripts_init');
 
 // Add custom navigation to theme and adds Primary Navigation menu
 function klas_menus_init() {
-	register_nav_menus();
-	wp_create_nav_menu( 'Primary Navigation', array( 'slug' => 'primary-nav' ) );
+	register_nav_menus(
+		array( 
+				'primary-nav' => __( 'Primary Navigation' )
+			)
+	);
 }
 add_action( 'init', 'klas_menus_init' );
 

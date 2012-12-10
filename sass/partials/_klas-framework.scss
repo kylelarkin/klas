@@ -1,9 +1,22 @@
 /* SCSS Framework boilerplate from KLAS: https://github.com/kylelarkin/klas */
+// -------------------------------------------------
+// KL[AS] Compass Imports
+// ---------------------------------------------- */
+@import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
+@import "compass/css3/box-sizing";
+@import "compass/css3/images";
+@import "compass/css3/opacity";
+@import "compass/css3/transform";
+@import "compass/css3/transition";
+@import "compass/typography/lists/inline-block-list";
+@import "compass/typography/text/replacement";
+@import "compass/utilities/general/clearfix";
+
 
 // -------------------------------------------------
 // KL[AS] Variables
 // ---------------------------------------------- */
-
 $heading-font: Helvetica, Arial, sans-serif;
 $body-font: Helvetica, Arial, sans-serif;
 
@@ -15,6 +28,12 @@ $link-hover: #555;
 $page-width: 1280px;
 
 $ani-speed: 250ms;
+
+
+// -------------------------------------------------
+// Media Query Break Points
+// ---------------------------------------------- */
+$mq-desktop: 620px;
 
 
 // -------------------------------------------------

@@ -1,16 +1,6 @@
 @import "partials/reset";
 @import "partials/klas-framework";
 
-@import "compass/css3/border-radius";
-@import "compass/css3/box-shadow";
-@import "compass/css3/box-sizing";
-@import "compass/css3/opacity";
-@import "compass/css3/transform";
-@import "compass/css3/transition";
-@import "compass/typography/lists/inline-block-list";
-@import "compass/typography/text/replacement";
-@import "compass/utilities/general/clearfix";
-
 
 /* -------------------------------------------------
 ** TEMPLATE
@@ -23,10 +13,13 @@ input[type=submit] { -webkit-appearance: none; -moz-appearance: none; }
 
 /* Media Queries for determining javascript events, via http://adactio.com/journal/5429/ */
 body:after { content: 'mobile'; display: none; }
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: $mq-desktop) {
 	body:after { content: 'desktop'; }
 }
-// other sizes defined here
+// EXAMPLE
+// @media screen and (min-width: $mq-desktop) {
+// /* styles here */
+// } // END @media: $mq-desktop
 
 body {
 	color: $body-color;
@@ -53,5 +46,9 @@ p {
 }
 ul { 
 	list-style: disc; 
-	padding: 0 0 0 1.1em;
+	margin: 0 0 0 1.1em;
+	nav & { // remove styling for nav ul's
+		list-style: none; 
+		margin: 0;
+	}
 }
