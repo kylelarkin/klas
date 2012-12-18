@@ -35,7 +35,7 @@
 		<header role="header">
 		
 			<nav role="navigation">
-				<?php wp_nav_menu( array( 'theme_location' => 'primary-nav', 'container' => false) ); ?>
+				<?php wp_nav_menu( array( 'theme_location' => 'primary-header-menu', 'container' => false) ); ?>
 			</nav>
 			
 		</header>

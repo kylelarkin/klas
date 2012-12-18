@@ -12,9 +12,10 @@ add_action('wp_enqueue_scripts', 'klas_scripts_init');
 function klas_menus_init() {
 	register_nav_menus(
 		array( 
-				'primary-nav' => __( 'Primary Navigation' )
+				'primary-header-menu' => __( 'Primary Header Menu' )
 			)
 	);
+	wp_create_nav_menu( 'Primary Navigation', array( 'slug' => 'primary-nav' ) );
 }
 add_action( 'init', 'klas_menus_init' );
 
