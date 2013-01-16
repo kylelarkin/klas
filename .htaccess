@@ -1,3 +1,4 @@
+Options All -Indexes
 
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
