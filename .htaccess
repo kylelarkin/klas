@@ -1,16 +1,19 @@
 Options All -Indexes
 
-# BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
+
+# Hide source control files and directories.
+RedirectMatch 404 "(?:.*)/(?:[.#].*)$"
+
+# BEGIN WordPress
 RewriteBase /
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
-</IfModule>
-
 # END WordPress
+</IfModule>
 
 # BEGIN Gzip
 <IfModule mod_deflate.c>
