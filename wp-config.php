@@ -17,7 +17,7 @@
 // One wp-config.php file for multiple environments setup from http://www.messaliberty.com/2010/01/how-to-create-a-single-wp-config-file-for-local-and-remote-wordpress-development/
 if ($_SERVER['REMOTE_ADDR']=='127.0.0.1' || $_SERVER['REMOTE_ADDR']=='localhost' || preg_match('/^192\.168\.5\./', $_SERVER['REMOTE_ADDR'])) {
 	define('WP_ENV', 'local');
-} elseif ($_SERVER['HTTP_HOST']=='tld.stagingurl.com') {
+} elseif (preg_match('/psstudiosdev\.com/', $_SERVER['HTTP_HOST'])) { // Set to staging server
 	define('WP_ENV', 'staging');
 } else {
 	define('WP_ENV', 'production');
