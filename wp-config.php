@@ -37,9 +37,9 @@ if ( WP_ENV == 'local' ) {
 	/** MySQL hostname */
 	define('DB_HOST', 'replace_with_local_ip'); // local_db_host
  
-	define('WP_SITEURL', ".dev");
+	define('WP_SITEURL', ".dev"); // local_site_url
 	
-	define('WP_HOME', ".dev");	
+	define('WP_HOME', ".dev"); // local_home_url
  
 } elseif ( WP_ENV == 'staging') {
 	// ** MySQL settings - You can get this info from your web host ** //
@@ -55,9 +55,9 @@ if ( WP_ENV == 'local' ) {
 	/** MySQL hostname */
 	define('DB_HOST', ''); // staging_db_host
  
-	define('WP_SITEURL', ".com");
+	define('WP_SITEURL', ".com"); // staging_site_url
 	
-	define('WP_HOME', ".com");
+	define('WP_HOME', ".com"); // staging_site_url
  
 } else {
 	// ** MySQL settings - You can get this info from your web host ** //
@@ -73,9 +73,9 @@ if ( WP_ENV == 'local' ) {
 	/** MySQL hostname */
 	define('DB_HOST', ''); // prod_db_host
  
-	define('WP_SITEURL', ".com");
+	define('WP_SITEURL', ".com"); // prod_site_url
 	
-	define('WP_HOME', ".com");
+	define('WP_HOME', ".com"); // prod_site_url
 	
 }
 
@@ -94,14 +94,7 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'put your unique phrase here');
-define('SECURE_AUTH_KEY',  'put your unique phrase here');
-define('LOGGED_IN_KEY',    'put your unique phrase here');
-define('NONCE_KEY',        'put your unique phrase here');
-define('AUTH_SALT',        'put your unique phrase here');
-define('SECURE_AUTH_SALT', 'put your unique phrase here');
-define('LOGGED_IN_SALT',   'put your unique phrase here');
-define('NONCE_SALT',       'put your unique phrase here');
+// Insert_Salts_Below
 
 /**#@-*/
 
