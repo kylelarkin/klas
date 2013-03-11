@@ -22,61 +22,61 @@ if ($_SERVER['REMOTE_ADDR']=='127.0.0.1' || $_SERVER['REMOTE_ADDR']=='localhost'
 } else {
 	define('WP_ENV', 'production');
 }
- 
+
 if ( WP_ENV == 'local' ) {
 	// ** MySQL settings - You can get this info from your web host ** //
 	/** The name of the database for WordPress */
 	define('DB_NAME', 'replace_with_local_db'); // local_db_name
- 
+
 	/** MySQL database username */
-	define('DB_USER', 'admin'); // local_db_user
- 
+	define('DB_USER', 'root'); // local_db_user
+
 	/** MySQL database password */
-	define('DB_PASSWORD', 'admin'); // local_db_password
- 
+	define('DB_PASSWORD', 'root'); // local_db_password
+
 	/** MySQL hostname */
-	define('DB_HOST', 'replace_with_local_ip'); // local_db_host
- 
+	define('DB_HOST', 'localhost'); // local_db_host
+
 	define('WP_SITEURL', ".dev"); // local_site_url
-	
+
 	define('WP_HOME', ".dev"); // local_home_url
- 
+
 } elseif ( WP_ENV == 'staging') {
 	// ** MySQL settings - You can get this info from your web host ** //
 	/** The name of the database for WordPress */
 	define('DB_NAME', 'staging'); // staging_db_name
- 
+
 	/** MySQL database username */
 	define('DB_USER', ''); // staging_db_user
- 
+
 	/** MySQL database password */
 	define('DB_PASSWORD', ''); // staging_db_password
- 
+
 	/** MySQL hostname */
 	define('DB_HOST', ''); // staging_db_host
- 
+
 	define('WP_SITEURL', ".com"); // staging_site_url
-	
-	define('WP_HOME', ".com"); // staging_site_url
- 
+
+	define('WP_HOME', ".com"); // staging_home_url
+
 } else {
 	// ** MySQL settings - You can get this info from your web host ** //
 	/** The name of the database for WordPress */
-	define('DB_NAME', ''); // prod_db_name
- 
+	define('DB_NAME', ''); // production_db_name
+
 	/** MySQL database username */
-	define('DB_USER', ''); // prod_db_user
- 
+	define('DB_USER', ''); // production_db_user
+
 	/** MySQL database password */
-	define('DB_PASSWORD', ''); // prod_db_password
- 
+	define('DB_PASSWORD', ''); // production_db_password
+
 	/** MySQL hostname */
-	define('DB_HOST', ''); // prod_db_host
- 
-	define('WP_SITEURL', ".com"); // prod_site_url
-	
-	define('WP_HOME', ".com"); // prod_site_url
-	
+	define('DB_HOST', ''); // production_db_host
+
+	define('WP_SITEURL', ".com"); // production_site_url
+
+	define('WP_HOME', ".com"); // production_home_url
+
 }
 
 /** Database Charset to use in creating database tables. */
