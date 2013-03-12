@@ -39,6 +39,19 @@ $mq-desktop: 620px;
 // -------------------------------------------------
 // KL[AS] Mixins
 // ---------------------------------------------- */
+
+// Remove UL Styling
+@mixin ul-reset {
+	list-style: none;
+	margin: 0;
+}
+
+// Rem Font Sizing
+@mixin font-size-rem($size: 1.6){
+  font-size: ($size * 10) + px;
+  font-size: $size + rem;
+}
+
 @mixin areas-text-style-nav {
 	font-size: .875em;
 	text-transform: uppercase;
@@ -60,13 +73,13 @@ $mq-desktop: 620px;
 	margin: 0 0 1.1em;
 	overflow: hidden;
 
-	&:after { 
+	&:after {
 		position: absolute;
-		width: 50.4em; 
-		height: 44em; 
-		bottom: -6.8em; 
+		width: 50.4em;
+		height: 44em;
+		bottom: -6.8em;
 		right: -7.4em;
-		content: ''; 
+		content: '';
 		background-color: $gold_alt;
 		@include rotate(-45deg);
 	}
@@ -118,6 +131,6 @@ $mq-desktop: 620px;
 }
 
 @mixin trans-fade-visible {
-	visibility: visible; 
+	visibility: visible;
 	opacity: 1;
 }
