@@ -10,6 +10,8 @@ A SASS based starter theme for WordPress created by <a href="http://kylelarkin.c
 4. Update your wp-config.php file as usual (add db credentials, salts, etc)
 5. Refresh your permalinks
 
+**Note for Shared Hosting:** The line `Options All -Indexes` in .htaccess may cause 4xx/5xx errors site-wide on some shared servers. Please remove this line if necessary.
+
 ## Taking inspiration from:
 - [HTML5 Boilerplate](http://html5boilerplate.com/)
 - [Starkers](http://viewportindustries.com/products/starkers/)
