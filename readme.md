@@ -12,6 +12,12 @@ A SASS based starter theme for WordPress created by <a href="http://kylelarkin.c
 
 **Note for Shared Hosting:** The line `Options All -Indexes` in .htaccess may cause 4xx/5xx errors site-wide on some shared servers. Please remove this line if necessary.
 
+## Usage
+1. The `wp-config.php` file is intended for use with the following 3 project lifecycle environments, with the following naming conventions:
+  - Development: [optional.]example.dev. Regex will detect this for you automagically.
+  - Staging: any URL structure you'd like, e.g. preview.example.com. **You must define this in the `wp-config.php` file on line 23**.
+  - Production: any URL, e.g. example.com. This is the default and the file will fallback to these credentials if the Development/Staging conditions aren't met.
+
 ## Taking inspiration from:
 - [HTML5 Boilerplate](http://html5boilerplate.com/)
 - [Starkers](http://viewportindustries.com/products/starkers/)
