@@ -36,6 +36,9 @@ add_action( 'widgets_init', 'klas_widgets_init' );
 // Registers Editor Styles
 add_editor_style( 'css/editor-style.css' );
 
+// Remove theme/plugin editor
+define( 'DISALLOW_FILE_EDIT', true );
+
 // Add custom logo to Wordpress Login page(s). Logo should be no bigger than 323 pixels wide by 67 pixels high
 function klas_login_logo() { ?>
     <style type="text/css">
