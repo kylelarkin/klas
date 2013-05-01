@@ -33,7 +33,11 @@ $ani-speed: 250ms;
 // -------------------------------------------------
 // Media Query Break Points
 // ---------------------------------------------- */
-$mq-desktop: 620px;
+$mq-mobile: 420px;
+$mq-mob-tab: 520px;
+$mq-tablet: 620px;
+$mq-tab-desk: 820px;
+$mq-desktop: 920px;
 
 
 // -------------------------------------------------
@@ -52,6 +56,25 @@ mark{background-color:#fcd700;color:#000;font-style:italic;font-weight:bold;}
 // -------------------------------------------------
 // KL[AS] Mixins
 // ---------------------------------------------- */
+
+// media query
+@mixin breakpoint($point) {
+	@if $point == mobile {
+		@media (min-width: $mq-mobile)  { @content; }
+	}
+	@else if $point == mob-tab {
+		@media (min-width: $mq-mob-tab) { @content; }
+	}
+	@else if $point == tablet {
+		@media (min-width: $mq-tablet) { @content; }
+	}
+	@else if $point == tab-desk {
+		@media (min-width: $mq-tab-desk) { @content; }
+	}
+	@else if $point == desktop {
+		@media (min-width: $mq-desktop) { @content; }
+	}
+}
 
 // Remove UL Styling
 @mixin ul-reset {
