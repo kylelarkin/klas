@@ -62,7 +62,7 @@ mark{background-color:#fcd700;color:#000;font-style:italic;font-weight:bold;}
 
 // Rem Font Sizing
 @mixin font-size-rem($size: 1.6){
-  font-size: ($size * 10) + px;
+  font-size: ($size * 10 + 5) + px;
   font-size: $size + rem;
 }
 
