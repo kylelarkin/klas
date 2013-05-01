@@ -1,5 +1,13 @@
-@import "partials/reset";
 @import "partials/klas-framework";
+@import "partials/font-base";
+@import "icon/*.png";
+@include all-icon-sprites;
+
+// COMPASS SPRITE EXAMPLE ( Place images to be sprited in img/icon/ e.g. "img/icon/logo.png" )
+
+// .icon-logo {
+// 	@include sprite-dimensions($icon-sprites, logo );
+// }
 
 
 /* -------------------------------------------------
@@ -16,53 +24,49 @@ body:after { content: 'mobile'; display: none; }
 @media only screen and (min-width: $mq-desktop) {
 	body:after { content: 'desktop'; }
 }
-// EXAMPLE
+// STANDARD MEDIA QUERY EXAMPLE
+
 // @media screen and (min-width: $mq-desktop) {
 // /* styles here */
 // } // END @media: $mq-desktop
 
-body {
-	color: $body-color;
-	font-size: 100%;
-	font-weight: normal;
-	line-height: 150%;
-	font-family: $body-font;
-}
-a {
-	color: $link-color;
-	&:hover{
-		color: $link-hover;
-	}
-}
-h1 {
-	font-size: 2.25em;  /* 16x2.25=36 */
-	line-height: 1.33333333333333em; /* 48px */
-	color: $heading-color;
-}
-h2 {
-	font-size: 1.5em;   /* 16x1.5=24 */
-	color: $heading-color; /* 24px */
-}
-h3 {
-	font-size: 1.125em; /* 16x1.125=18 */
-	line-height: 1.33333333333333em; /* 24px */
-	color: $heading-color;
-}
-h4 {
-	font-size: 0.875em; /* 16x0.875=14 */
-	line-height: 1.71428571428571em; /* 24px */
-	color: $heading-color;
-}
-p {
-	font-size: 1em;		/* 16x1=16 */
-	padding-bottom: 1em;
-}
-ul {
-	list-style: disc;
-	margin: 0 0 0 1.1em;
-	padding-bottom: 1em;
-	nav & { // remove styling for nav ul's
-		@include ul-reset;
-		a { text-decoration: none; }
-	}
-}
+// SLECTOR SPECIFIC MEDIA QUERY EXAMPLE
+// .example-selector
+// /* mobile styles here */
+// @include breakpoint(tablet) {
+// /* tablet styles here */
+// }
+// @include breakpoint(desktop) {
+// /* desktop styles here */
+// }
+// }
+
+
+/*--------------START BASE STRUCTURE-------------- */
+/* -------------------------------------------------
+** Header
+** ---------------------------------------------- */
+
+/* -------------------------------------------------
+** Section
+** ---------------------------------------------- */
+
+/* -------------------------------------------------
+** Sidebar
+** ---------------------------------------------- */
+
+/* -------------------------------------------------
+** Footer
+** ---------------------------------------------- */
+
+
+
+/*--------------END BASE STRUCTURE--------------- */
+/* -------------------------------------------------
+** SITE SPECIFIC IMPORTS AND MODULES
+** ---------------------------------------------- */
+
+// @import "partials/page-home";
+// @import "partials/page-about-us";
+// @import "partials/page-contact-us";
+// @import "partials/sidebar";
