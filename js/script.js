@@ -1,17 +1,47 @@
-// Implemented media-query-specific js functionality via http://adactio.com/journal/5429/
-var viewport_size = ''; //viewport size
-
+// Inspired by media-query-specific js functionality via http://adactio.com/journal/5429/
 $(document).ready(function() {
-	if (window.getComputedStyle) { //for IE
+	// Call media query function
+	media_query();
+	// Document ready here
+});
+
+$(window).load(function() {
+	// Window load here
+    });
+});
+
+$(window).resize(function() {
+	// Call media query function
+	media_query();
+});
+
+function media_query() {
+	if (window.getComputedStyle) { // Check for IE
 		viewport_size = window.getComputedStyle(document.body,':after').getPropertyValue('content');
 	} else {
-		viewport_size = 'desktop'; //for IE
+		if ($(window).width() > 620) { // Set IE
+			viewport_size = 'desktop';
+		} else {
+			viewport_size = 'mobile';
+		}
 	}
-	
-	
 	if (viewport_size.indexOf("desktop") !== -1) { // aka if viewport_size == 'desktop':
-		// Desktop behavior
+		// Call desktop function
+		desktop();
+
 	} else {
-		// Mobile behavior
+		// Call mobile function
+		mobile();
 	}
-});
+}
+
+
+function mobile() {
+	// Mobile behavior here
+}
+
+function desktop() {
+	// Desktop behavior here
+}
+
+
