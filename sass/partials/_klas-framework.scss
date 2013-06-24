@@ -36,22 +36,31 @@ $ani-speed: 250ms;
 $mq-desktop: 620px;
 
 
-// -------------------------------------------------
-// Custom Text Selection Setup
+/ -------------------------------------------------
+// Basic Styles
 // ---------------------------------------------- */
-body,select,input,textarea{color:#333;}
-/* Custom text-selection colors (remove any text shadows:twitter.com/miketaylr/status/12228805301) */
-::-moz-selection{background:#fcd700;color:#fff;text-shadow:none;}
-::selection{background:#fcd700;color:#fff;text-shadow:none;}
-/* j.mp/webkit-tap-highlight-color */
-a:link{-webkit-tap-highlight-color:#fcd700;}
-ins{background-color:#fcd700;color:#000;text-decoration:none;}
-mark{background-color:#fcd700;color:#000;font-style:italic;font-weight:bold;}
 
+body,select,input,textarea{color:#333;}
 
 // -------------------------------------------------
 // KL[AS] Mixins
 // ---------------------------------------------- */
+
+// custom text selection treatment, developed from http://stackoverflow.com/a/10372599/136018
+@mixin selection($color, $background) {
+	$prefixes: ("-webkit-","-moz-", "-o-", "");
+    @each $prefix in $prefixes {
+        ::#{$prefix}selection {
+            color: $color;
+            background: $background;
+            text-shadow:none; // remove any text shadows:twitter.com/miketaylr/status/12228805301)
+        }
+    }
+    /* j.mp/webkit-tap-highlight-color */
+	a:link{-webkit-tap-highlight-color:$background;}
+	ins{background-color:$background;color:$color;text-decoration:none;}
+	mark{background-color:$background;color:$color;font-style:italic;font-weight:bold;}
+}
 
 // Remove UL Styling
 @mixin ul-reset {
