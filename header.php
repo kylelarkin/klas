@@ -9,9 +9,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<title><?php bloginfo('name'); ?><?php wp_title('|'); ?></title>
-	
+
 	<?php wp_head(); ?>
-	
+
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_directory' ); ?>/css/screen.css" />
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -21,23 +21,23 @@
 	<![endif]-->
 	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="<?php bloginfo('atom_url'); ?>" />
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico" />
-	
+
 	<script type="text/javascript">
 		var site_url = '<?php bloginfo('url'); ?>';
 	</script>
-	
+
 </head>
 
 <body <?php body_class(); ?>>
 
 	<div class="wrapper">
-	
-		<header role="header">
-		
+
+		<header role="banner">
+
 			<nav role="navigation">
 				<?php wp_nav_menu( array( 'theme_location' => 'primary-header-menu', 'container' => false) ); ?>
 			</nav>
-			
+
 		</header>
 
-		<div class="content-wrapper clearfix" role="content"> <!-- End Header -->
+		<div class="content-wrapper clearfix" role="main"> <!-- End Header -->

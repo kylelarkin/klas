@@ -2,6 +2,7 @@
 // -------------------------------------------------
 // KL[AS] Compass Imports
 // ---------------------------------------------- */
+@import "partials/reset";
 @import "compass/css3/border-radius";
 @import "compass/css3/box-shadow";
 @import "compass/css3/box-sizing";
@@ -33,7 +34,11 @@ $ani-speed: 250ms;
 // -------------------------------------------------
 // Media Query Break Points
 // ---------------------------------------------- */
-$mq-desktop: 620px;
+$mq-mobile: 420px;
+$mq-mob-tab: 520px;
+$mq-tablet: 620px;
+$mq-tab-desk: 820px;
+$mq-desktop: 920px;
 
 
 // -------------------------------------------------
@@ -46,6 +51,25 @@ body,select,input,textarea{color:#333;}
 // KL[AS] Mixins
 // ---------------------------------------------- */
 
+
+// media query
+@mixin breakpoint($point) {
+	@if $point == mobile {
+		@media (min-width: $mq-mobile)  { @content; }
+	}
+	@else if $point == mob-tab {
+		@media (min-width: $mq-mob-tab) { @content; }
+	}
+	@else if $point == tablet {
+		@media (min-width: $mq-tablet) { @content; }
+	}
+	@else if $point == tab-desk {
+		@media (min-width: $mq-tab-desk) { @content; }
+	}
+	@else if $point == desktop {
+		@media (min-width: $mq-desktop) { @content; }
+	}
+}
 // custom text selection treatment, developed from http://stackoverflow.com/a/10372599/136018
 @mixin selection($color, $background) {
 	$prefixes: ("-webkit-","-moz-", "-o-", "");
@@ -59,7 +83,6 @@ body,select,input,textarea{color:#333;}
     /* j.mp/webkit-tap-highlight-color */
 	a:link{-webkit-tap-highlight-color:$background;}
 	ins{background-color:$background;color:$color;text-decoration:none;}
-	mark{background-color:$background;color:$color;font-style:italic;font-weight:bold;}
 }
 
 // Remove UL Styling
@@ -71,8 +94,13 @@ body,select,input,textarea{color:#333;}
 
 // Rem Font Sizing
 @mixin font-size-rem($size: 1.6){
-  font-size: ($size * 10) + px;
+  font-size: ($size * 10 + 5) + px;
   font-size: $size + rem;
+}
+
+@mixin line-height-rem($size: 1.6){
+  line-height: ($size * 10 + 5) + px;
+  line-height: $size + rem;
 }
 
 @mixin areas-text-style-nav {
