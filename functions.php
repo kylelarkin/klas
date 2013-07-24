@@ -1,4 +1,4 @@
-<?
+<?php
 
 // Define own Jquery file and enqueue in footer
 function klas_scripts_init() {
