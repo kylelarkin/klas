@@ -1,4 +1,4 @@
-		</div> <!-- End .content -->
+		</div> <!-- End .content-wrapper -->
 		
 		<footer>
 			<p>&copy; <?php echo date("Y"); ?> Company Name.</p>
