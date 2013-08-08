@@ -84,6 +84,9 @@ if ( WP_ENV == 'local' ) {
 /** Set klas to the default template for WordPress to use. */
 define('WP_DEFAULT_THEME', 'klas');
 
+/** Set reasonable number of post revisions to maintain per post. */
+define( 'WP_POST_REVISIONS', 15 );
+
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
 
