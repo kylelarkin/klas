@@ -57,6 +57,18 @@ p {
 	font-size: 1em;		/* 16x1=16 */
 	padding-bottom: 1em;
 }
+em, i {
+	font-style: italic;
+	strong, b {
+		font-style: italic;
+	}
+}
+strong, b {
+	font-weight: bold;
+	em, i {
+		font-weight: bold;
+	}
+}
 ol {
 	list-style: decimal;
 	margin: 0 0 1em 2em;
