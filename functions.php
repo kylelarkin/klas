@@ -39,6 +39,12 @@ add_editor_style( 'css/editor-style.css' );
 // Remove theme/plugin editor
 define( 'DISALLOW_FILE_EDIT', true );
 
+// Remove theme "customizer"
+function edit_admin_menus() {
+	remove_submenu_page('themes.php','customize.php');
+}
+add_action( 'admin_menu', 'edit_admin_menus' );
+
 // Add custom logo to Wordpress Login page(s). Logo should be no bigger than 323 pixels wide by 67 pixels high
 function klas_login_logo() { ?>
     <style type="text/css">
